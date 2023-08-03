@@ -14,19 +14,16 @@ public class App {
         pollObj(drone);
         pollObj(bird);
 
-        // output("---------------------");
-
-        // -- Das geht nicht mehr! :: Abstraktion  --//
-        // HoneyBee bee = new HoneyBee();
-        // pollObj(bee);
-
-
     }
-
-    //--- 3. Iteration :: Polymorphie ----- //
 
     private static void pollObj(HoneyBee obj) {
         output(obj.doYourJob());
+        output(obj.fly());
+        output("---------------------");
+    }
+
+        private static void pollObj(Bird obj) {
+        output(obj.hasFeathers());
         output(obj.fly());
         output("---------------------");
     }
@@ -35,8 +32,6 @@ public class App {
     private static void output(String outputStr) {
         System.out.println(outputStr);
     }
-
-
 
 }
 
